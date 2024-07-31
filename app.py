@@ -32,7 +32,7 @@ scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_eval_scaled = scaler.transform(X_eval)
 
-loaded_model = tf.keras.models.load_model("lung_model")
+loaded_model = tf.keras.models.load_model("lung_model.keras")
 
 eval_loss, eval_acc = loaded_model.evaluate(X_eval_scaled, y_eval)
 print(
@@ -71,7 +71,7 @@ def home():
             "YELLOW_FINGERS": [YELLOW_FINGERS],
             "ANXIETY": [ANXIETY],
             "PEER_PRESSURE": [PEER_PRESSURE],
-            "CHRONIC_DISEASE": [CHRONIC_DISEASE]
+            "CHRONIC_DISEASE": [CHRONIC_DISEASE],
             "FATIGUE": [FATIGUE],
             "ALLERGY": [ALLERGY],
             "WHEEZING": [WHEEZING],
