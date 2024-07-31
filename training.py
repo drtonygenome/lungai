@@ -54,9 +54,9 @@ for i in range(len(history.history['val_accuracy'])):
         model.stop_training = True
         break
 
-model.save("lung_model")
+model.save("lung_model.keras")
 
-loaded_model = tf.keras.models.load_model("lung_model")
+loaded_model = tf.keras.models.load_model("lung_model.keras")
 
 eval_loss, eval_acc = loaded_model.evaluate(X_eval_scaled, y_eval)
 print(f"\nprecision: {eval_acc * 100:.2f}%")
